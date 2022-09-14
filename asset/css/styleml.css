@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:wght@300;400&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.myLinkBtn {
+    border-radius: 100px;
+    width: 50%;
+    border: 2px solid #fff;
+}
+
+.kipp {
+    background-color: rgb(239, 233, 233);
+}
+
+
+.fa {
+    font-size: 1.2em;
+}
+
+.post-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50px;
+    padding: 10px 0px 0px 0px;
+}
+
+.fa-thumbs-down,
+.fa-thumbs-up {
+    color: rgb(7, 13, 1);
+}
+
+.fa-thumbs-down {
+    transform: rotateY(180deg);
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: red;
+    box-shadow: 0px 0px 15px #000;
+}
+
+.dott {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: green;
+    box-shadow: 0px 0px 15px #000;
+
+}
+
+.count {
+    width: 50px;
+    border-radius: 4px;
+}
+
+.noti {
+    display: flex;
+    justify-content: space-between;
+    width: 350px;
+}
+
+body {
+    height: 100vh;
+    max-width: 100%;
+    overflow-x: hidden;
+    background-color: #f2f2f2;
+
+}
+
+.snow {
+    position: relative;
+    text-align: center;
+    color: #f2f2f2;
+}
+
+.centered {
+    position: absolute;
+    left: 25%;
+    top: 64%;
+    text-shadow: 3px 2px 2px red;
+}
+
+.height {
+    min-height: 100vh;
+}
+
+.el {
+    border: 1px solid lightgray;
+    padding: 10px;
+    margin-right: 30px;
+    margin-bottom: 20px;
+    min-height: 300px;
+    width: 330px;
+}
+
+.cbtn {
+    display: inline-block;
+    width: 17vw;
+
+}
+
+.ddk {
+    color: #000;
+}
+
+
+#show-posts {
+    justify-content: space-around;
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+
+.hii {
+    height: 270px;
+}
+
+.rmcl {
+    visibility: visible;
+}
+
+.shcl {
+    color: green;
+}
+
+@media screen and (max-width:375px) {
+    #managePosts {
+        font-size: 11px;
+        padding: 5px;
+    }
+
+    .tr {
+        font-size: 20px;
+    }
+
+    /*design for notification mobile view */
+
+    .noti {
+        margin-top: 10px;
+        width: 320px;
+        font-size: 14px;
+    }
+
+    .jik {
+        min-width: 95vw;
+    }
+
+    .jiker {
+        font-size: 11px;
+    }
+
+    .but {
+        display: grid;
+    }
+
+    .hii {
+        height: 100%;
+    }
+
+}
