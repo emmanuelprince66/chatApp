@@ -76,6 +76,8 @@ require_once 'asset/php/header.php'; ?>
             });
         }
 
+        //send message
+
         $("body").on('click', '.sbtn', function() {
             reciever = $(this).attr('id');
             msg = document.querySelector(".msg_content").value;
@@ -90,7 +92,7 @@ require_once 'asset/php/header.php'; ?>
                     success: function(response) {
                         $("#content").html(response);
                         location.reload();
-                    }
+                     }
                 });
             } else {
 

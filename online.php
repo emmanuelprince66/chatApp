@@ -42,20 +42,25 @@ if (isset($cid) && $_GET['action'] == 'get_msg') {
 
 
 if (isset($_GET['action']) && $_GET['action'] == 'get_users') {
-    $sql = 'SELECT * FROM users ORDER bY created_at ASC';
+    $sql = 'SELECT * FROM users ORDER BY created_at ASC';
     $stmt = $conn->query($sql);
     $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
     foreach ($data as $row) {
+
 ?>
 <div>
     <?php
-            $msg_status = 'unread';
-            $sql = 'SELECT * FROM users_chat WHERE msg_status = :msg_status';
+            $msg_status = 'read';
+            $sql = 'SELECT * FROM users_chat'
+            ;
             $stmt = $conn->prepare($sql);
-            $stmt->execute(['msg_status' => $msg_status]);
+            $stmt->execute();
             $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+            // echo json_encode($data);
             foreach ($data as $bow) {
+                
             }
 
 
@@ -88,7 +93,7 @@ if (isset($_GET['action']) && $_GET['action'] == 'get_users') {
                         echo   '';
                     } elseif (!isset($cid)) {
                         echo '';
-                    } elseif (isset($cid) && $cname == $bow['reciever_username'] && $bow['sender_username'] == $row['name']) {
+                    } elseif (isset($cid) && $cname == $bow['reciever_username'] && $bow['sender_username'] == $row['name'] && $bow['msg_status'] == 'unread' ) {
                         echo   '<form action="message.php" method="post">
                               <input type="hidden" name="id" id="Id" value="' . $row['id'] . '"> 
                         <button type="submit" class="btn btn-sm d-flex btn-outline-success align-items-center butmsg"style="height:24px">View message</button>     

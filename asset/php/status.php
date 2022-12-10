@@ -98,7 +98,7 @@ if (isset($_POST['reciever']) && isset($_POST['msg']) && isset($cid)) {
 
     $username = $data[0]['name'];
     $user_name = $cname;
-
+ 
 
     $content = '';
 

@@ -223,7 +223,7 @@ $(document).ready(function() {
                     success: function(response) {
                         $("#register-btn").val('Sign Up');
                         if (response = 'register') {
-                            window.open('home.php');
+                            window.open('index.php');
                         } else {
                             $('#regAlert').html(response);
                         }
@@ -245,7 +245,7 @@ $(document).ready(function() {
                 success: function(response) {
                     $("#login-btn").val('Sign In');
                     if (response == 'login') {
-                        window.location = 'home.php';
+                        window.location = 'index.php';
 
                         swal.fire({
                             title: 'You are logged in!',

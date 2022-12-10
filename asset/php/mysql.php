@@ -1,7 +1,7 @@
 <?php 
-$dsn= 'mysql:host=sql100.epizy.com;dbname=epiz_32590068_packetcodeofficial';
-$dbuser = "epiz_32590068";
-$dbpass = "fgIoAVEh2UaH"; 
+$dsn= 'mysql:host=localhost;dbname=db_chat_users';
+$dbuser = "root";
+$dbpass = ""; 
 
 
 try {

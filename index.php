@@ -238,7 +238,6 @@ $(document).ready(function() {
                 post_id: post_id
             },
             success: function(response) {
-                //  console.log(response);
 
                 res = JSON.parse(response);
 

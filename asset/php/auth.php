@@ -59,7 +59,7 @@ class Auth extends Database
   }
 
   //insert into user_chat..
-  public function insert_msl($user_name, $username, $msg_content)
+  public function insert_msl($user_name, $username, $msg_content) 
   {
     $sql = "INSERT INTO users_chat(sender_username , reciever_username , msg_content,msg_status,msg_date) 
     VALUES(:user_name , :username, :msg_content, 'unread' , NOW())";

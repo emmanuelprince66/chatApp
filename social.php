@@ -77,6 +77,7 @@ $(document).ready(function() {
     }
 
     $("#show").html('<p class="font-weight-bold mx-auto text-primary">Please wait........</>');
+
     setInterval(function() {
         $.ajax({
             url: 'asset/php/status.php',
@@ -100,7 +101,8 @@ $(document).ready(function() {
             },
             success: function(response) {
 
-                $("#show").html(response);
+               $("#show").html(response);
+                // console.log(response);
             }
         });
     }, 2000);
